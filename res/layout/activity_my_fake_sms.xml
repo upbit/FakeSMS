@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/editNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="10086" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editNum"
+        android:layout_alignBottom="@+id/editNum"
+        android:layout_alignParentLeft="true"
+        android:text="发送者号码："
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editNum"
+        android:layout_below="@+id/editNum"
+        android:ems="10"
+        android:text="中国移不动，外国联不通！" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editMsg"
+        android:layout_alignBottom="@+id/editMsg"
+        android:layout_alignParentLeft="true"
+        android:text="短信正文："
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editMsg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="onButton1Click"
+        android:text="推送信息" />
+
+</RelativeLayout>

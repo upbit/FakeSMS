@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="on"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.broadanywhere.myfakesms.AuthenticatorActivity" >
+
+   <EditText
+       android:id="@+id/editNum"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_toRightOf="@+id/labelNum"
+       android:text="+10086*2" >
+	</EditText>
+
+    <TextView
+        android:id="@+id/labelNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/editNum"
+        android:layout_alignParentLeft="true"
+        android:text="发送者号码:" />
+   
+    <TextView
+        android:id="@+id/labelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editNum"
+        android:text="短信正文:" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonSend"
+        android:layout_below="@+id/labelText"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical|top"
+        android:inputType="textMultiLine"
+        android:text="中国移不动，外国连不通！" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="伪造短信" />
+
+</RelativeLayout>
